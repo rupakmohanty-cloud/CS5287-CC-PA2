@@ -1,0 +1,4 @@
+- aws_msk_cluster:
+    name: ansible-kafka-cluster
+    state: absent
+

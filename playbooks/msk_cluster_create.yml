@@ -1,0 +1,15 @@
+- aws_msk_cluster:
+    name: kafka-cluster
+    state: present
+    version: 2.6.1
+    nodes: 6
+    ebs_volume_size: "{{ aws_msk_options.ebs_volume_size }}"
+    subnets:
+      - subnet-e3b48ce7c25861eeb
+      - subnet-2990c8b25b07ddd43
+      - subnet-d9fbeaf46c54bfab6
+    wait: true
+    wait_timeout: 1800
+    configuration_arn: arn:aws:kafka:us-east-1:000000000001:configuration/kafka-cluster-configuration/aaaaaaaa-bbbb-4444-3333-ccccccccc-1
+    configuration_revision: 1
+
